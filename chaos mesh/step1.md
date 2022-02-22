@@ -1,5 +1,3 @@
-# Create a Kubernetes cluster with multiple nodes
-
 With this environment the Kubernetes nodes are already configured with `kubeadm` which has been set and configured.
 
 To launch a running kubernetes cluster.

@@ -4,7 +4,7 @@ To check Helm version, execute the following command:
 `helm version`{{execute}}
 
 The expected output is as follows:
-`version.BuildInfo{Version:"v3.5.4", GitCommit:"1b5edb69df3d3a08df77c9902dc17af864ff05d1", GitTreeState:"dirty", GoVersion: "go1.16.3"}`
+`version.BuildInfo{Version:"v3.1.2", GitCommit:"d878d4d45863e42fd5cff6743294a11d28a9abce", GitTreeState:"clean", GoVersion:"go1.13.8"}`
 
 ## Step 1: Add Chaos Mesh repository​
 Add the Chaos Mesh repository to the Helm repository:
@@ -33,13 +33,16 @@ helm install chaos-mesh chaos-mesh/chaos-mesh -n=chaos-mesh --version 2.1.3`{{ex
 ## Verify the installation​
 To check the running status of Chaos Mesh, execute the following command:
 
-`kubectl get po -n chaos-mesh`{{execute}}
+`kubectl get pod -n chaos-mesh`{{execute}}
 
 The expected output is as follows:
 
-`NAME                                        READY   STATUS    RESTARTS   AGE
-chaos-controller-manager-69fd5c46c8-xlqpc   3/3     Running   0          2d5h
-chaos-daemon-jb8xh                          1/1     Running   0          2d5h
-chaos-dashboard-98c4c5f97-tx5ds             1/1     Running   0          2d5h`
+`
+NAME                                        READY   STATUS    RESTARTS   AGE
+chaos-controller-manager-56d8ddb48d-2fcc9   1/1     Running   0          77s
+chaos-controller-manager-56d8ddb48d-85tjk   1/1     Running   0          78s
+chaos-controller-manager-56d8ddb48d-fdd7b   1/1     Running   0          77s
+chaos-daemon-67znl                          1/1     Running   0          78s
+chaos-dashboard-85bd7b5cb4-b548g            1/1     Running   0          78s`
 
 🎉 YAY! Chaos Mesh has been successfully installed.
