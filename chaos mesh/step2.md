@@ -30,6 +30,8 @@ helm install chaos-mesh chaos-mesh/chaos-mesh -n=chaos-mesh --version 2.1.3`{{ex
  Moreover, it can be installed in various other environments as well. Additional details are available at their website.  
  https://chaos-mesh.org/docs/production-installation-using-helm/
 
+ `kubectl wait node/controlplane --for condition=running`{{execute}}
+
 ## Verify the installation​
 To check the running status of Chaos Mesh, execute the following command:
 
