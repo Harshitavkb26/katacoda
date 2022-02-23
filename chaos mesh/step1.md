@@ -4,6 +4,7 @@ To launch a running kubernetes cluster.
 `launch.sh`{{execute}}
 
 after kubernetes cluster started. 
+ you need to wait till the nodes become ready
 `kubectl wait node/controlplane --for condition=ready`{{execute}}
 
 You can get nodes with `kubectl get nodes`{{execute}}
