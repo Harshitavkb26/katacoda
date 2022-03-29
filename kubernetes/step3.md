@@ -1,3 +1,3 @@
-### 3. Cloning the Kubernetes Git Repository
-`git clone https://github.com/kubernetes/kubernetes`{{execute}}<br />
+`git clone git@github.com:kubernetes/kubernetes.git –-depth 1`{{execute}}
+
 `cd kubernetes`{{execute}}
