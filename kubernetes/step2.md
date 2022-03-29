@@ -20,6 +20,7 @@ For convenience, we can move the go directory to a more reasonable directory as:
 
 ### Installing make (Ubuntu/Debian)
 
- to install essential files run the following command:-
+ build-essential Packages are required to run softwares. 
+ To install build-essentials packages run the following command:-
 
 `sudo apt-get install build-essential`{{execute}}
