@@ -1,9 +1,8 @@
  Kubernetes is written in Go. Building and developing Kubernetes requires a very recent version of Go.[This table](https://github.com/kubernetes/community/blob/master/contributors/devel/development.md#go) lists the required Go versions for different versions of Kubernetes. 
- 
+
 ### Installing GO
 
 Let us Start by updating the packages:
-
 `sudo apt-get update`{{execute}}
 
 first we download the tarball archive of the go compiler.
@@ -26,7 +25,7 @@ For convenience, we can move the go directory to a more reasonable directory as:
 
 Finally, verify that go is installed successfully by running the command:
 
-`go version`
+`go version`{{execute}}
 
 The command should return the installed go version as:
 
