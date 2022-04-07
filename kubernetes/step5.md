@@ -1,4 +1,3 @@
-### 5. Run Basic Developer workflow
 Generating the OpenAPI spec and related files<br />
 `hack/update-generated-swagger-docs.sh`{{execute}}<br />
 `hack/update-gofmt.sh`{{execute}}
