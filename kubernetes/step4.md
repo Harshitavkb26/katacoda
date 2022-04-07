@@ -1,4 +1,3 @@
-### 4. Checkout the personal fork
 Making remote repository<br />
 `git remote add upstream https://github.com/kubernetes/kubernetes.git`{{execute}}<br />
 Never push to upstream master<br />
