@@ -21,4 +21,4 @@ you can use the following command to create a shallow clone.
 `git clone https://github.com/kubernetes/kubernetes --depth 1`
 
 after cloning change the directory
-`cd kubernetes`{{execute}}S
+`cd kubernetes`{{execute}}
