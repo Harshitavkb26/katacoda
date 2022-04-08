@@ -30,7 +30,7 @@ Finally, verify that go is installed successfully by running the command:
 
 The command should return the installed go version as:
 
-`go version go1.17.6 linux/amd64`
+`go version go1.18beta1 linux/amd64`
 
 🎉 YAY! Go has been successfully installed.
 
