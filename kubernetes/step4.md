@@ -9,6 +9,7 @@ Get your local master up to date:<br />
 `git fetch upstream `{{execute}}<br />
 
 NOTE :- Here also we can use `--depth` flag. Basically this flag is used to get deepen history of shallow clone.
+`git fetch upstream --depth 1`<br/>
 
 `git checkout master`{{execute}}<br />
 `git rebase upstream/master`{{execute}}
