@@ -7,7 +7,7 @@ This allows you to make all of your edits locally rather than directly in the so
 
  `git clone https://github.com/kubernetes/kubernetes `{{execute}}
 
- NOTE :- Kubernetes is a large project, and compiling it can use a lot of resources. We recommend the following for any physical or virtual machine being used for building Kubernetes.
+ NOTE :- Kubernetes is a large project, and compiling it can use a lot of resources. We recommend the following hardware recommendation for any physical or virtual machine being used for building Kubernetes.
 
    * 8GB of RAM
    * 50GB of free disk space
@@ -15,7 +15,7 @@ This allows you to make all of your edits locally rather than directly in the so
    when you clone repository  on local machine  wait for some time (40-50 minutes expected).
 
 
-but if hardware recommandation are not fullfilled then you can use `--depth` flag it will generate a shallow repository which doesn't require any specific system configuration.
+but if hardware recommendation are not fullfilled then you can use `--depth` flag it will generate a shallow repository which doesn't require any specific system configuration.
 you can use the following command to create a shallow clone.
 
 `git clone https://github.com/kubernetes/kubernetes --depth 1`
