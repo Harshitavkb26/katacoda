@@ -1,5 +1,19 @@
-Because kubernetes only merges pull requests when unit, integration, and e2e tests are passing, your development environment needs to run all tests successfully. While this quick start will get you going, to really understand the testing infrastructure, read the [Testing Guide](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-testing/testing.md) and check out the [SIG Architecture developer guide](https://github.com/kubernetes/community/blob/master/contributors/devel/README.md#sig-testing) material.
-#### Few examples on unit test
-[Unit tests](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-testing/testing.md#unit-tests) in kubernetes is used to confirm that a particular function behaves as intended. `make test` could be used to run all the unit tests at once, it is the entrypoint for running the unit tests that ensures that GOPATH is set up correctly. To run unit tests from certain packages, certain arguments could be passed along with `make test` `k8s.io/kubernetes` prefix is added automatically to these:
-`make test WHAT=./staging/src/k8s.io/kubectl/pkg/cmd/create              # run tests for staging/src/k8s.io/kubectl/pkg/cmd/create `{{execute}}
-More infromation on this is provided [here](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-testing/testing.md#run-unit-tests-from-certain-packages)
+Kubernetes is a large project, so the configuration of your development environment must ensure that all unit, integration, and end-to-end tests run successfully because Kubernetes only merges pull requests when they pass the unit, integration, and end-to-end tests.
+Although this quick start will get you started, to learn about the testing infrastructure in depth, read the [Testing Guide](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-testing/testing.md) and examine the [SIG Architecture developer guide](https://github.com/kubernetes/community/blob/master/contributors/devel/README.md#sig-testing) material.
+
+## make commands in kubernetes:-
+  make command is used to build and maintain groups of programs and files from the source code. In kubernetes also we use some make commands. Some of which are as follows:-
+
+  ### make test
+   `make test` is the entrypoint for running the unit tests.
+ This command tests various parts of  code base to ensure the correctness of the functionality. 
+ It uses the test framework built in  code base to perform hundreds of tests. It does take a fair bit of time to execute all the tests. If all the tests are successful, ALL OK is issued.
+basically make test  Run all unit tests.
+
+  ### make verify
+  The `make verify` command executes all presubmission checks.
+
+  ### make help
+  In Kubernetes, there are a number of other commands we can use to simplify our testing
+  process. We can use the make help command to get a list of all the commands available
+  `make help` Prints make targets and help information.
