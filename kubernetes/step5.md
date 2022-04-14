@@ -16,4 +16,4 @@ basically make test  Run all unit tests.
   ### make help
   In Kubernetes, there are a number of other commands we can use to simplify our testing
   process. We can use the make help command to get a list of all the commands available
-  `make help` Prints make targets and help information.
+  `make help`{{execute}} Prints make targets and help information.
