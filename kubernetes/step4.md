@@ -4,8 +4,8 @@ Never push to upstream master<br />
 `git remote set-url --push upstream no_push`{{execute}}<br />
 Confirm that your remotes make sense:<br />
 `git remote -v`{{execute}}<br />
-Get your local master up to date:<br />
 
+Get your local master up to date:<br />
 `git fetch upstream `{{execute}}<br />
 
 NOTE :- Here also we can use `--depth` flag. Basically this flag is used to get deepen history of shallow clone.
