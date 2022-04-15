@@ -6,11 +6,11 @@ Let us Start by updating the packages:
 `sudo apt-get update`{{execute}}
 
 first we download the tarball archive of the go compiler.
-`sudo curl -O https://go.dev/dl/go1.18.1.linux-amd64.tar.gz`{{execute}} 
+`wget https://go.dev/dl/go1.18.1.linux-amd64.tar.gz`{{execute}} 
 
 The next step is to extract the contents of the archive. We can use the command as:
 
-`sudo tar -xvf go1.18.linux-amd64.tar.gz`{{execute}} 
+`sudo tar -xzf go1.18.1.linux-amd64.tar.gz`{{execute}} 
 
 
 The command above should extract the archive and create a directory called to go.
@@ -30,7 +30,7 @@ Finally, verify that go is installed successfully by running the command:
 
 The command should return the installed go version as:
 
-`go version go1.18 linux/amd64`
+`go version go1.18.1 linux/amd64`
 
 🎉 YAY! Go has been successfully installed.
 
