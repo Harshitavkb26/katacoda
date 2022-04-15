@@ -6,7 +6,7 @@ Let us Start by updating the packages:
 `sudo apt-get update`{{execute}}
 
 first we download the tarball archive of the go compiler.
-`sudo curl -O https://dl.google.com/go/go1.18.linux-amd64.tar.gz`{{execute}} 
+`sudo curl -O https://go.dev/dl/go1.18.1.linux-amd64.tar.gz`{{execute}} 
 
 The next step is to extract the contents of the archive. We can use the command as:
 
