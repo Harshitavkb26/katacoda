@@ -1,3 +1,3 @@
- As Kubernetes is a large project with multiple contributors, in order to make any changes to this project, we need to create a copy of repository using fork. `Forking` helps to create a copy of the repository and make changes in your own branch/repository without affecting the upstream repository.
+kind is a tool built for running local Kubernetes clusters using Docker containers as nodes. Kind was intended primarily for testing Kubernetes itself, but it's actually quite useful for setting up a Kubernetes environment for local development, QA, or continuous integration and deployment. 
 
  ![Forking](./assets/forking.png)

@@ -1,42 +1,60 @@
- Kubernetes is written in Go. Building and developing Kubernetes requires a very recent version of Go.[This table](https://github.com/kubernetes/community/blob/master/contributors/devel/development.md#go) lists the required Go versions for different versions of Kubernetes. 
+A fully functioning environment using kind includes a few different components. For our purposes, we will install the following list of software.
 
-### Installing GO
+1. Docker.
+2. The kubectl tool.
+3. kind.
 
-Let us Start by updating the packages:
+## Docker
+
+The kind project stands for “Kubernetes in Docker”. As such, you will need to install Docker to get started. This is typically environment specific, and you may need to consult the Docker documentation if you get stuck. The following should get you started:
+
+Older versions of Docker were called docker, docker.io, or docker-engine. If these are installed you should start by getting rid of them:
+
+ `sudo apt-get remove docker docker-engine docker.io containerd runc`{{execute}}
+
+Once done, you can add the Docker apt repository to support future installations over apt. To do so, we need to first install packages necessary for installing from apt over HTTPS.
+
+` sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common`{{execute}}
+
+Then, we can add the Docker apt repository by adding Docker’s GPG key and followed by adding the apt repository.
+
+`curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+ sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"`{{execute}}
+
+Lastly, Update the apt package index:
+
 `sudo apt-get update`{{execute}}
 
-first we download the tarball archive of the go compiler.
-`wget https://go.dev/dl/go1.18.1.linux-amd64.tar.gz`{{execute}} 
+Install the latest version of Docker CE and containerd:
 
-The next step is to extract the contents of the archive. We can use the command as:
+`sudo apt-get install docker-ce docker-ce-cli containerd.io`{{execute}}
 
-`sudo tar -xzf go1.18.1.linux-amd64.tar.gz`{{execute}} 
+## Kubectl
 
+kind does not strictly require kubectl, but because we are aiming to setup a fully functioning development environment we are going to install kubectl to be able to do some basic Kubernetes functions on our cluster.
 
-The command above should extract the archive and create a directory called to go.
+If you get stuck at any point, refer to the official [kubectl installation instructions](https://kubernetes.io/docs/tasks/tools/).
 
-The next step is to set the path for go. This allows the go executable to be accessible outside the main go directory or without an absolute path.
- also remove any previous installation of go.
+Linux users can fetch kubectl through the Google apt repository:
+`curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt-get install -y kubectl`{{execute}}
 
-`sudo rm -rf /usr/local/go`{{execute}}
+## kind
 
-For convenience, we can move the go directory to a more reasonable directory as:
+Now we can finally install kind. Kind publishes binaries to Github. These can be installed by downloading the release for Linux distributions.
 
-`sudo mv go /usr/local`{{execute}}
+`curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.14.0/kind-linux-amd64
+ chmod +x ./kind
+ mv ./kind /usr/local/bin`{{execute}}
 
-Finally, verify that go is installed successfully by running the command:
-
-`go version`{{execute}}
-
-The command should return the installed go version as:
-
-`go version go1.18.1 linux/amd64`
-
-🎉 YAY! Go has been successfully installed.
-
-### Installing make (Ubuntu/Debian)
-
- build-essential Packages are required to run softwares. 
- To install build-essentials packages run the following command:-
-
-`sudo apt-get install build-essential`{{execute}}
+🎉 YAY! All the dependencies have been successfully installed.
