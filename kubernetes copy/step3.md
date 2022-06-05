@@ -2,7 +2,7 @@ kind is a tool for running local Kubernetes clusters using Docker containers as 
 
 `kind create cluster`{{execute}}
 
-![Forking](./assets/forking.png)
+![kind_cluster](./assets/kind_cluster.png)
 
 By default, this will create a single Kubernetes node running as a docker container named `kind-control-plane` and configures kubectl to use this cluster. You can view the Docker container running your cluster through the docker ps command:
 
