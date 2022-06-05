@@ -5,7 +5,7 @@
     "time": "10 minutes",
     "details": {
       "steps": [{
-        "title": "Step 1 - What is Kind?",
+        "title": "Step 1 - What is kind?",
         "text": "step1.md"
     },
     {
@@ -14,7 +14,7 @@
     },
     
     {
-      "title": "Step 3 - How Kind works",
+      "title": "Step 3 - How kind works",
       "text": "step3.md"
     },
     {
