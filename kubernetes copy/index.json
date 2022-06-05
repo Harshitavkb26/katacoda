@@ -1,11 +1,11 @@
 {
-    "title": "Getting Started with Kubernetes Upstream Development",
-    "description": "Install Basic Tools",
+    "title": "Kind",
+    "description": "Use Kind for Local development and Continious Integration",
     "difficulty": "beginner",
     "time": "10 minutes",
     "details": {
       "steps": [{
-        "title": "Step 1 - Create a fork on github",
+        "title": "Step 1 - What is Kind?",
         "text": "step1.md"
     },
     {
@@ -14,11 +14,11 @@
     },
     
     {
-      "title": "Step 3 - Cloning the Kubernetes Git Repository",
+      "title": "Step 3 - How Kind works",
       "text": "step3.md"
     },
     {
-      "title": "Step 4 - Checkout the personal fork",
+      "title": "Step 4 - Testing",
       "text": "step4.md"
     },
     {
