@@ -1,1 +1,1 @@
-Congrats!! You have completed your first scenario
+Well done! This scenario taught you how to use kind for local development.

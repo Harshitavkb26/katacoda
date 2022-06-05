@@ -20,14 +20,6 @@
     {
       "title": "Step 4 - Testing",
       "text": "step4.md"
-    },
-    {
-      "title": "Step 5 -  Testing",
-      "text": "step5.md"
-    },
-    {
-        "title": "Step 6 -  Run a test using Go",
-        "text": "step6.md" 
     }
             ],
       "intro": {

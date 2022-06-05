@@ -1,4 +1,0 @@
-#### Few examples on unit test
-[Unit tests](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-testing/testing.md#unit-tests) in kubernetes is used to confirm that a particular function behaves as intended. `make test` could be used to run all the unit tests at once, it is the entrypoint for running the unit tests that ensures that GOPATH is set up correctly. To run unit tests from certain packages, certain arguments could be passed along with `make test` `k8s.io/kubernetes` prefix is added automatically to these:
-`make test WHAT=./staging/src/k8s.io/kubectl/pkg/cmd/create              # run tests for staging/src/k8s.io/kubectl/pkg/cmd/create `{{execute}}
-More infromation on this is provided [here](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-testing/testing.md#run-unit-tests-from-certain-packages)

@@ -1,9 +1,8 @@
-# Welcome to the kubernetes contributior guide!
+# Use Kind for Local development and Continious Integration
 
-Welcome to the scenario tho help setting up kubernetes for getting started with upstream contribution!
+Welcome to the scenario tho help setting up kind for local development and CI/CD.
 
-In this scenario We'll work through the steps to set up kubernetes on a local system(here, Ubuntu) for contributing upstream to k8s, push some changes, and run some common tests to help you understand how the Github Actions CI vets code contributions before allowing them to be accepted for merging.
-
-More details can be found on [kubernetes contributors guide](https://github.com/kubernetes/community/blob/master/contributors/guide/README.md)
+Kind is a tool developed by the Kubernetes team to run local Kubernetes clusters using Docker containers as nodes. It’s the easiest way to run your own Kubernetes cluster, and it’s great for local development, testing, and continuous integration.
+More details can be found on [kind](https://kind.sigs.k8s.io/)
 
 Let's jump in! 🤓
