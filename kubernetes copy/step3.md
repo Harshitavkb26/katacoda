@@ -1,24 +1,21 @@
-Cloning a GitHub repository creates a local copy of the remote repo. When we clone a repository, all the files are downloaded to the local machine but the remote git repository remains unchanged.
+kind is a tool for running local Kubernetes clusters using Docker containers as Kubernetes Nodes. To see how this work, let’s create a cluster with the default settings:
 
-This allows you to make all of your edits locally rather than directly in the source files of the origin repo.
- To clone a repository we can use `git clone` command
+`kind create cluster`{{execute}}
 
- Here's the command to clone kubernetes repository.
+![Forking](./assets/forking.png)
 
- `git clone https://github.com/kubernetes/kubernetes `{{execute}}
+By default, this will create a single Kubernetes node running as a docker container named `kind-control-plane` and configures kubectl to use this cluster. You can view the Docker container running your cluster through the docker ps command:
 
- NOTE :- Kubernetes is a large project, and compiling it can use a lot of resources. We recommend the following hardware recommendation for any physical or virtual machine being used for building Kubernetes.
+`docker ps`{{execute}}
 
-   * 8GB of RAM
-   * 50GB of free disk space
+Or through your newly configured `kubectl`.
 
-   when you clone repository  on local machine  wait for some time (40-50 minutes expected).
+`kubectl get nodes`{{execute}}
 
+You can delete your cluster at any time using the `kind delete cluster` command:
 
-but if hardware recommendation are not fullfilled then you can use `--depth` flag it will generate a shallow repository which doesn't require any specific system configuration.
-you can use the following command to create a shallow clone.
+`kind delete cluster`{{execute}}
 
-`git clone https://github.com/kubernetes/kubernetes --depth 1`
+You can also run a specific version of Kubernetes using the --image flag. For example, to create a Kubernetes cluster using version 1.14.10 of Kubernetes you would use the following command:
 
-after cloning change the directory
-`cd kubernetes`{{execute}}
+`kind create cluster --image kindest/node:v1.14.10`
