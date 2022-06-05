@@ -13,7 +13,7 @@ for that
 `cd staging/src/k8s.io/apiextensions-apiserver/pkg/registry/customresourcedefinition/`{{execute}}
 `nano strategy.go`{{execute}}
 
-return []string{“I am a warning”} instead null in WarningsOnCreate function.
+return []string{“I am a warning”} instead nil in WarningsOnCreate function.
 
 after all the changes create a kind image as follows :-
 `kind build node-image . -–image warning-test`{{execute}}
@@ -28,6 +28,6 @@ to get info about cluster run the following command:-
 
 Now create a custom resource definitiion
 
-`kubectl apply -f resourcedefinition.yaml`{{exevute}}
+`kubectl apply -f resourcedefinition.yaml`{{execute}}
 
 you will see a warning on the terminal.
